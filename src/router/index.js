@@ -1,9 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
-import Splash from '../pages/Splash';
-import Welcome from '../pages/Welcome';
-import Onboarding from '../pages/Onboarding';
+import {Splash, Welcome, Onboarding, Login, Homepage} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +21,16 @@ export default function Router() {
       <Stack.Screen
         name="Onboarding"
         component={Onboarding}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Homepage"
+        component={Homepage}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

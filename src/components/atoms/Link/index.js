@@ -10,6 +10,6 @@ export default function Link({onPress, label}) {
 }
 
 const styles = StyleSheet.create({
-  container: {marginTop: 30, alignItems: 'center'},
+  container: {alignItems: 'center'},
   text: {fontSize: 12, fontFamily: 'Poppins-Medium', color: '#1D262C'},
 });

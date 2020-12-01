@@ -10,7 +10,7 @@ import {
 import {ILBackgroundOnboard, ILLogo} from '../../assets';
 import {Button, ButtonIcon, Link} from '../../components';
 
-export default function Onboarding() {
+export default function Onboarding({navigation}) {
   return (
     <View style={styles.page}>
       <ImageBackground source={ILBackgroundOnboard} style={styles.bg}>
@@ -27,7 +27,12 @@ export default function Onboarding() {
           <ButtonIcon icon="google" />
         </View>
         <Button label="Signup with E-mail" />
-        <Link label="Login to my Account" />
+        <View style={styles.link}>
+          <Link
+            label="Login to my Account"
+            onPress={() => navigation.navigate('Login')}
+          />
+        </View>
       </View>
     </View>
   );
@@ -63,4 +68,5 @@ const styles = StyleSheet.create({
     marginTop: 72,
     marginBottom: 30,
   },
+  link: {marginTop: 30},
 });
